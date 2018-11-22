@@ -5,26 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Add_Mod_Del_Invoice_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="378.636" Width="525">
+        Title="MainWindow" Height="390.636" Width="525">
     <Grid>
-        <Menu IsMainMenu="True" Margin="0,0,0.4,311.8">
+        <Menu IsMainMenu="True" Margin="0,0,0.4,335.8">
             <MenuItem x:Name="updatedeftable" Header="Update Def table"></MenuItem>
             <MenuItem x:Name="searchforinvoice" Header="Search for Invoice" Click="searchforinvoice_Click"/>
         </Menu>
-        <RadioButton x:Name="rbtnNewInvoice" Content="New Invoice" HorizontalAlignment="Left" Margin="69,42,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="rbtnModifyInvoice" Content="Modify Invoice" HorizontalAlignment="Left" Margin="203,42,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="rbtnDeleteInvoice" Content="Delete Invoice" HorizontalAlignment="Left" Margin="340,42,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbtnNewInvoice" Content="New Invoice" HorizontalAlignment="Left" Margin="69,42,0,0" VerticalAlignment="Top" Checked="rbtnNewInvoice_Checked"/>
+        <RadioButton x:Name="rbtnModifyInvoice" Content="Modify Invoice" HorizontalAlignment="Left" Margin="203,42,0,0" VerticalAlignment="Top" IsEnabled="False" Checked="rbtnModifyInvoice_Checked"/>
+        <RadioButton x:Name="rbtnDeleteInvoice" Content="Delete Invoice" HorizontalAlignment="Left" Margin="340,42,0,0" VerticalAlignment="Top" IsEnabled="False" Checked="rbtnDeleteInvoice_Checked"/>
         <Label x:Name="lblInvoiceNumber" Content="Invoice Number:" HorizontalAlignment="Left" Height="29" Margin="10,73,0,0" VerticalAlignment="Top" Width="107"/>
         <TextBox x:Name="tbtInvoiceNumber" HorizontalAlignment="Left" Height="26" Margin="117,77,0,0" TextWrapping="Wrap" Text="TBD" VerticalAlignment="Top" Width="109" IsEnabled="False"/>
         <Label x:Name="lblInvoiceDate" Content="Invoice Date:" HorizontalAlignment="Left" Margin="286,73,0,0" VerticalAlignment="Top"/>
-        <DatePicker HorizontalAlignment="Left" Height="26" Margin="371,74,0,0" VerticalAlignment="Top" Width="117" IsEnabled="False"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="28" Margin="117,120,0,0" VerticalAlignment="Top" Width="140" IsEnabled="False"/>
+        <DatePicker x:Name="invoiceDatePicker" HorizontalAlignment="Left" Height="26" Margin="371,74,0,0" VerticalAlignment="Top" Width="117" IsEnabled="False"/>
+        <ComboBox x:Name="cbSelectItem" HorizontalAlignment="Left" Height="28" Margin="117,120,0,0" VerticalAlignment="Top" Width="140" IsEnabled="False" SelectionChanged="cbSelectItem_SelectionChanged"/>
         <Label x:Name="lblSelectItem" Content="Select Item:" HorizontalAlignment="Left" Margin="36,120,0,0" VerticalAlignment="Top" Width="81"/>
         <Label x:Name="lblItemCost" Content="Default Cost:" HorizontalAlignment="Left" Margin="287,120,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtDefaultCost" HorizontalAlignment="Left" Height="23" Margin="371,123,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="109" IsReadOnly="True"/>
-        <Button x:Name="btnAddItem" Content="Add Item" HorizontalAlignment="Left" Height="26" Margin="54,160,0,0" VerticalAlignment="Top" Width="107" IsEnabled="False"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="130" Margin="10,209,0,0" VerticalAlignment="Top" Width="490"/>
-        <Button x:Name="btnDeleteItem" Content="Delete Item" HorizontalAlignment="Left" Height="26" Margin="212,160,0,0" VerticalAlignment="Top" Width="108" IsEnabled="False"/>
-        <Button x:Name="btnSaveInvoice" Content="Save Invoice" HorizontalAlignment="Left" Height="26" Margin="365,160,0,0" VerticalAlignment="Top" Width="106" IsEnabled="False"/>
+        <TextBox x:Name="txtDefaultCost" HorizontalAlignment="Left" Height="23" Margin="371,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" IsReadOnly="True" IsEnabled="False"/>
+        <Button x:Name="btnAddItem" Content="Add Item" HorizontalAlignment="Left" Height="26" Margin="54,160,0,0" VerticalAlignment="Top" Width="107" IsEnabled="False" Click="btnAddItem_Click"/>
+        <DataGrid x:Name="dgInvoiceItems" HorizontalAlignment="Left" Height="130" Margin="21,209,0,0" VerticalAlignment="Top" Width="479" IsEnabled="False"/>
+        <Button x:Name="btnDeleteItem" Content="Delete Item" HorizontalAlignment="Left" Height="26" Margin="212,160,0,0" VerticalAlignment="Top" Width="108" IsEnabled="False" Click="btnDeleteItem_Click"/>
+        <Button x:Name="btnSaveInvoice" Content="Save Invoice" HorizontalAlignment="Left" Height="26" Margin="365,160,0,0" VerticalAlignment="Top" Width="106" IsEnabled="False" Click="btnSaveInvoice_Click"/>
     </Grid>
 </Window>
