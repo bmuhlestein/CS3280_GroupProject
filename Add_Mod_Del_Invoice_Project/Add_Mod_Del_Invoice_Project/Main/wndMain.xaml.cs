@@ -85,7 +85,6 @@ namespace Add_Mod_Del_Invoice_Project
 
                 if (bSearchedForInvoice == true)
                 {
-                    rbtnNewInvoice.IsEnabled = false;
                     rbtnModifyInvoice.IsEnabled = true;
                     rbtnDeleteInvoice.IsEnabled = true;
                 }
@@ -156,7 +155,8 @@ namespace Add_Mod_Del_Invoice_Project
         {
             try
             {
-                string sID = "000002";
+                // place holder for testing
+                double sID = 000002;
                 // Get item ID based on the item selected
                 string cost = mainlogic.getItemCost(sID);
                 string sCost = cost.ToString();

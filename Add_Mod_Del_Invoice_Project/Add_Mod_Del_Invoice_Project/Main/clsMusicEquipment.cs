@@ -13,6 +13,9 @@ namespace Add_Mod_Del_Invoice_Project.Main
         private string sEquipmentDescription;
         private string sCost;
 
+        /// <summary>
+        /// public property for getting equipment ID
+        /// </summary>
         public string getEqipmentID
         {
             set
@@ -25,6 +28,9 @@ namespace Add_Mod_Del_Invoice_Project.Main
             }
         }
 
+        /// <summary>
+        /// public property for getting equipment Name
+        /// </summary>
         public string getEquipmentName
         {
             set
@@ -37,6 +43,9 @@ namespace Add_Mod_Del_Invoice_Project.Main
             }
         }
 
+        /// <summary>
+        /// publi property for getting equipment description
+        /// </summary>
         public string getEquipmentDescription
         {
             set
@@ -49,6 +58,9 @@ namespace Add_Mod_Del_Invoice_Project.Main
             }
         }
 
+        /// <summary>
+        /// public propety for getting equipment cost
+        /// </summary>
         public string getEquipmentCost
         {
             set
@@ -61,6 +73,10 @@ namespace Add_Mod_Del_Invoice_Project.Main
             }
         }
 
+        /// <summary>
+        /// method for overridding the tostring method
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return sEquipmentName;

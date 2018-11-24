@@ -36,6 +36,10 @@ namespace Add_Mod_Del_Invoice_Project.Main
         clsMainSQL mainSQL = new clsMainSQL();
         clsMusicEquipment Equipment;
 
+        /// <summary>
+        /// Method for generating the drop down list of equipment
+        /// </summary>
+        /// <returns></returns>
         public List<clsMusicEquipment> getItems()
         {
             List<clsMusicEquipment> musicEquipment = new List<clsMusicEquipment>();
@@ -65,7 +69,12 @@ namespace Add_Mod_Del_Invoice_Project.Main
             return musicEquipment.Cast<clsMusicEquipment>().ToList();
         }
 
-        public string getItemCost(string sEquipmentID)
+        /// <summary>
+        /// Method for getting an item cost from the selected item in the drop down
+        /// </summary>
+        /// <param name="sEquipmentID"></param>
+        /// <returns></returns>
+        public string getItemCost(double sEquipmentID)
         {
             //string sEID = "000002";
             try
@@ -84,7 +93,6 @@ namespace Add_Mod_Del_Invoice_Project.Main
                     //double.TryParse(value, out dValue);
                     return value;
                 }
-                
             }
             catch (Exception ex)
             {
