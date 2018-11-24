@@ -237,5 +237,10 @@ namespace Add_Mod_Del_Invoice_Project
                 MessageBox.Show(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
             }
         }
+
+        private void btnAddItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
