@@ -238,9 +238,32 @@ namespace Add_Mod_Del_Invoice_Project
             }
         }
 
-        private void btnAddItem_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Method for when "Item search" has been clicked from the menu.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void updatedeftable_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                Items.wndItems wnditems = new Items.wndItems();
+                this.Hide();
+                wnditems.ShowDialog();
+                // get the invoice number from search window;
+                this.Show();
+                //bSearchedForInvoice = true;
 
+                //if (bSearchedForInvoice == true)
+                //{
+                //    rbtnModifyInvoice.IsEnabled = true;
+                //    rbtnDeleteInvoice.IsEnabled = true;
+                //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
     }
 }

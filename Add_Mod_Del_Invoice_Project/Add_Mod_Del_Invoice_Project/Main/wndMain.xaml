@@ -8,7 +8,7 @@
         Title="MainWindow" Height="390.636" Width="525">
     <Grid>
         <Menu IsMainMenu="True" Margin="0,0,0.4,335.8">
-            <MenuItem x:Name="updatedeftable" Header="Update Def table"></MenuItem>
+            <MenuItem x:Name="updatedeftable" Header="Update Def table" Click="updatedeftable_Click"></MenuItem>
             <MenuItem x:Name="searchforinvoice" Header="Search for Invoice" Click="searchforinvoice_Click"/>
         </Menu>
         <RadioButton x:Name="rbtnNewInvoice" Content="New Invoice" HorizontalAlignment="Left" Margin="69,42,0,0" VerticalAlignment="Top" Checked="rbtnNewInvoice_Checked"/>

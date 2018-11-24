@@ -19,9 +19,46 @@ namespace Add_Mod_Del_Invoice_Project.Items
     /// </summary>
     public partial class wndItems : Window
     {
+        private clsItemsLogic Logic = new clsItemsLogic();
         public wndItems()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //Call to load Table to Initalize Grid
+
+            rdoMod.IsChecked = true;
+        }
+        /// <summary>
+        /// Reads the Radio Button. proceeds with correct functionality.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            string sSQL;
+            // Which Function takes Place 
+            if (rdoAdd.IsChecked == true)
+            {
+                //Get Index of checked Row. Pull out each field and add to string 
+                sSQL = "Add";
+
+            }
+            else if (rdoMod.IsChecked == true)
+            {
+                //Get Index of checked Row. Pulls out all fields to have updated. 
+                sSQL = "Modify";
+            }
+            else
+            {
+                //Get Index of the checked Row. 
+                // Checks to see if Item can be delted. 
+                // If so proceed. 
+                sSQL = "Delete";
+
+            }
         }
     }
 }
