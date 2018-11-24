@@ -31,5 +31,10 @@ namespace Add_Mod_Del_Invoice_Project
             this.Hide();
             wndsearch.ShowDialog();
         }
+
+        private void btnAddItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
